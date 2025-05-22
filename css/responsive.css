@@ -140,15 +140,18 @@
   }
 }
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
-@media (max-width: 767px) and (min-width: 360px) {
-  section .portfolio-list .portfolio-item {
+@media only screen and (max-width: 767px) and (min-width: 360px) {
+  .portfolio-list {
     display: flex;
     flex-direction: column;
   }
+  .section-info .subtext {
+    width: 100%;
+  }
 
-  .portfolio-item-info {
+  .teammates-list-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
   }
 
   .teammates-list {
@@ -160,6 +163,7 @@
     display: flex;
     width: 100%;
     flex-direction: row;
+    border: 2px black solid;
   }
 
   footer,
