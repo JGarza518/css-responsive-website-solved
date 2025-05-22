@@ -4,12 +4,16 @@
   * Add the media rule and the styles that belong to the MOBILE view only
 */
 
-@media max-width:(min-width: 1024px) {
-  .top-navigation ul li:hover a,
-  .top-navigation .trigram:hover {
+@media (min-width: 1024px) {
+  .top-navigation ul li:hover a {
     font-weight: bold;
     color: black;
     text-decoration: underline black;
+  }
+
+  .trigram,
+  .fa {
+    display: none;
   }
 
   .teammate-social-icons .twitter:hover {
@@ -52,7 +56,7 @@
 /* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
 
 /* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
-@media (max-width: 1023px) AND (min-width: 768px) {
+@media (max-width: 1023px) and (min-width: 768px) {
   header .top-navigation {
     display: flex;
     flex-direction: row-reverse;
@@ -68,7 +72,7 @@
     flex-direction: column;
   }
 
-  .portfolio-list .portfolio-item {
+  .portfolio-item {
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -78,13 +82,15 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
   }
 
   .teammate {
     display: flex;
     align-items: center;
-    width: 40%;
+    width: 45%;
+    gap: 5px;
   }
 
   .teammate-img-wrapper {
@@ -134,10 +140,40 @@
   }
 }
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
-@media (max-width: 767px) {
-  footer .footer-contacts {
+@media (max-width: 767px) and (min-width: 360px) {
+  section .portfolio-list .portfolio-item {
     display: flex;
     flex-direction: column;
-    outline: 2px solid red;
+  }
+
+  .portfolio-item-info {
+    display: flex;
+    justify-content: center;
+  }
+
+  .teammates-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .teammate {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  footer,
+  .social-icons,
+  .twitter span,
+  .facebook span,
+  .linked-in span,
+  .instagram span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-contacts {
+    display: flex;
+    flex-direction: column;
   }
 }
